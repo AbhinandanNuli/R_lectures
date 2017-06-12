@@ -1,0 +1,56 @@
+Lecture 06
+
+dataframe
+write.csv (M1, file = “tt”)
+
+M3 <- read.csv(“tt”)
+
+getFile <- "https://www.nseindia.com/content/historical/EQUITIES/2017/JAN/
+cm25JAN2017bhav.csv.zip"
+
+download.file(getFile,”tt.zip”,”libcurl”)
+
+unzip(“tt.zip”)
+
+df1 <- read.csv("cm25JAN2017bhav.zip")
+
+str(df1)
+summary(df1)
+head(df1)
+
+
+df1 <- read.csv(unzip("ttdl.zip"))
+df1 <- read.csv(unz("ttdl.zip", "cm25JAN2017bhav.csv"))
+
+                    df1 <- read.csv(unzip("ttdl.zip"), stringsAsFactors = F)
+                    str(df1)
+                    
+                    length(df1)
+                    colnames(df1)
+                    nrow(df1)
+                    ncol(df1)
+                    df1(,-14) # drop column 14
+                    str(df1)
+                    
+                    
+                    
+                    df1[1,2]
+                    df1[1,"SERIES"]
+                    df1[,2]
+                    df1[1,]$SERIES
+                    df1$SERIES[1]
+                    df1[1]
+                    df1[,1]
+                    df1[1,]
+                    df1$SYMBOL
+                    df2 <- cbind(df1,c(1:nrow(df1)))
+                    unique(df1$series)
+                    levels(df1$series)
+                    df1$SYMBOL<-as.character(df1$SYMBOL)
+                    str(df1)
+                    df1$SERIES<-as.character(df1$ SERIES)
+                    str(df1)
+                    
+                    
+                    1
+                    
